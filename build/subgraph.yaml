@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: FunNFT
@@ -18,7 +18,7 @@ dataSources:
         - Transfer
       abis:
         - name: FunNFT
-          file: ./abis/FunNFT.json
+          file: FunNFT/abis/FunNFT.json
       eventHandlers:
         - event: Approval(indexed address,indexed address,indexed uint256)
           handler: handleApproval
@@ -26,4 +26,4 @@ dataSources:
           handler: handleApprovalForAll
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
-      file: ./src/mapping.ts
+      file: FunNFT/FunNFT.wasm
